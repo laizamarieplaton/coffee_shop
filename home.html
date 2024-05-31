@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bean There, Done That</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header>
+        <div class="nav container">
+            <a href="#" class="logo">Coffee <span>.</span></a>
+            <nav>
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#products" class="nav-link">Products</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <i class='bx bx-cart' id="cart-icon" data-count="0" onclick="toggleCart()"></i>
+
+                <a href="index.html" class='bx bx-log-out'></a>
+
+            </nav>
+
+        </div>
+    </header>
+<!--HOME-->
+    <section class="home container" id="home">
+        <div class="home-text">
+            <h1>Your Daily Dose of Happiness</h1>
+            <p>More than just coffee, it's a daily dose of happiness. Coffee lovers unite! Explore beans, brews, and equipment for every coffee enthusiast.</p>
+            <a href="#products" class="btn"><span>Shop Now </span><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+        <img src="images/coffeebg.png" class="home-img" alt="Coffee Background">
+    </section>
+
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="images/about-img.jpg" alt="" >
+          </div>
+        <div class="about-text">
+          <h2>About Us</h2>
+          <p>We are passionate about coffee, that delicious beverage brewed from roasted beans.
+        From its origins as a tropical fruit to its journey to your cup, we strive to bring you the perfect cup every time.</p>
+          <p>We believe that coffee is more than just a drink; it's a ritual, a moment of connection, and a fuel for creativity.</p>
+          <p>Whether you're a seasoned coffee connoisseur or just starting your exploration, we're here to provide you with an exceptional coffee experience, one sip at a time.</p>
+          <a href="#" class="btn">Learn More</a>
+        </div>
+
+      </section>
+       
+
+<!--PRODUCTS-->
+    <section class="shop container" id="products">
+        <h2 class="section-title">Shop Products</h2>
+        <div class="shop-content">
+            <div class="product-box">
+                <div class="img"><img src="images/product1.jpg" alt="HOT AMERICANO"></div>
+                <div class="title">HOT AMERICANO</div>
+                <div class="box">
+                    <div class="price">₱120.00</div>
+                    <button class="btnView" onclick="displayProduct('HOT AMERICANO', 'images/product1.jpg', 120.00, 'A strong espresso diluted with hot water, creating a bolder coffee experience than a standard drip-brew.')">View</button>
+                </div>
+            </div>
+
+            <div class="product-box">
+                <div class="img"><img src="images/product2.jpeg" alt="HOT CAPPUCCINO"></div>
+                <div class="title">HOT CAPPUCCINO</div>
+                <div class="box">
+                    <div class="price">₱140.00</div>
+                    <button class="btnView" onclick="displayProduct('HOT CAPPUCCINO', 'images/product2.jpeg', 140.00, 'A classic Italian coffee featuring espresso, steamed milk, and a thick layer of milk foam offers a balanced coffee blend and creamy texture.')">View</button>
+                </div>
+            </div>
+
+            <div class="product-box">
+                <div class="img"><img src="images/product3.jpeg" alt="HOT CHOCOLATE"></div>
+                <div class="title">HOT CHOCOLATE</div>
+                <div class="box">
+                    <div class="price">₱140.00</div>
+                    <button class="btnView" onclick="displayProduct('HOT CHOCOLATE', 'images/product3.jpeg', 140.00, 'A warm, comforting drink made with melted chocolate or cocoa powder, typically mixed with hot milk and sweetened.')">View</button>
+                </div>
+            </div>
+
+            <div class="product-box">
+                <div class="img"><img src="images/product4.png" alt="HOT MOCHA"></div>
+                <div class="title">HOT MOCHA</div>
+                <div class="box">
+                    <div class="price">₱150.00</div>
+                    <button class="btnView" onclick="displayProduct('HOT MOCHA', 'images/product4.png', 150.00, 'A delightful coffee drink combining espresso with rich chocolate, often topped with whipped cream for a decadent treat.')">View</button>
+                </div>
+            </div>
+
+            <div class="product-box">
+                <div class="img"><img src="images/product5.jpg" alt="ICED AMERICANO"></div>
+                <div class="title">ICED AMERICANO</div>
+                <div class="box">
+                    <div class="price">₱160.00</div>
+                    <button class="btnView" onclick="displayProduct('ICED AMERICANO', 'images/product5.jpg', 160.00, 'Bold espresso diluted with cold water, perfect for a refreshing coffee kick.')">View</button>
+                </div>
+            </div>
+            <!-- Repeat similar div blocks for each product -->
+
+            <div class="product-box">
+                <div class="img"><img src="images/product6.jpg" alt="ICED CAPPUCCINO"></div>
+                <div class="title">ICED CAPPUCCINO</div>
+                <div class="box">
+                    <div class="price">₱165.00</div>
+                    <button class="btnView" onclick="displayProduct('ICED CAPPUCCINO', 'images/product6.jpg', 165.00, 'Espresso, cold milk, and a thick layer of milk foam, offering a balanced and creamy coffee experience over ice.')">View</button>
+                </div>
+            </div>
+
+            <div class="product-box">
+                <div class="img"><img src="images/product7.jpg" alt="ICED LATTE"></div>
+                <div class="title">ICED LATTE</div>
+                <div class="box">
+                    <div class="price">₱180.00</div>
+                    <button class="btnView" onclick="displayProduct('ICED LATTE', 'images/product7.jpg', 180.00, 'Espresso mixed with a larger portion of cold milk, creating a smooth and milky coffee drink.')">View</button>
+                </div>
+            </div>
+
+            <div class="product-box">
+                <div class="img"><img src="images/product8.jpg" alt="ICED CARAMEL MACCHIATO"></div>
+                <div class="title">ICED CARAMEL MACCHIATO</div>
+                <div class="box">
+                    <div class="price">₱190.00</div>
+                    <button class="btnView" onclick="displayProduct('ICED CARAMEL MACCHIATO', 'images/product8.jpg', 190.00, 'Espresso layered over cold milk with a drizzle of caramel sauce, offering a sweet and refreshing coffee treat.')">View</button>
+                </div>
+            </div>
+
+            <div class="product-box">
+                <div class="img"><img src="images/product9.jpg" alt="CARAMEL CREAM FRAPPE"></div>
+                <div class="title">CARAMEL CREAM FRAPPE</div>
+                <div class="box">
+                    <div class="price">₱220.00</div>
+                    <button class="btnView" onclick="displayProduct('CARAMEL CREAM FRAPPE', 'images/product9.jpg', 220.00, 'Creamy blend of caramel, milk, and ice, topped with whipped cream and caramel drizzle.')">View</button>
+                </div>
+            </div>
+
+            <div class="product-box">
+                <div class="img"><img src="images/product10.jpg" alt="CHOCOLATE CHIP FRAPPE"></div>
+                <div class="title">CHOCOLATE CHIP FRAPPE</div>
+                <div class="box">
+                    <div class="price">₱240.00</div>
+                    <button class="btnView" onclick="displayProduct('CHOCOLATE CHIP FRAPPE', 'images/product10.jpg', 240.00, 'Blended coffee, chocolate chips, milk, and ice, for a decadent treat.')">View</button>
+                </div>
+            </div>
+
+            <div class="product-box">
+                <div class="img"><img src="images/product11.jpg" alt="COFFEE JELLY FRAPPE"></div>
+                <div class="title">COFFEE JELLY FRAPPE</div>
+                <div class="box">
+                    <div class="price">₱240.00</div>
+                    <button class="btnView" onclick="displayProduct('COFFEE JELLY FRAPPE', 'images/product11.jpg', 240.00, 'Refreshing coffee drink with blended coffee, milk, ice, and chewy coffee jelly bits.')">View</button>
+                </div>
+            </div>
+
+            <div class="product-box">
+                <div class="img"><img src="images/product12.jpg" alt="STRAWBERRIES AND CREAM"></div>
+                <div class="title">STRAWBERRIES AND CREAM FRAPPE</div>
+                <div class="box">
+                    <div class="price">₱255.00</div>
+                    <button class="btnView" onclick="displayProduct('STRAWBERRIES AND CREAM FRAPPE', 'images/product4.png', 255.00, 'Sweet and creamy blend of strawberries, milk, and ice, topped with whipped cream.')">View</button>
+                </div>
+            </div>
+
+            <div class="product-box">
+                <div class="img"><img src="images/product13.jpeg" alt="MANGO DRAGONFRUIT"></div>
+                <div class="title">MANGO DRAGONFRUIT</div>
+                <div class="box">
+                    <div class="price">₱265.00</div>
+                    <button class="btnView" onclick="displayProduct('MANGO DRAGONFRUIT', 'images/product13.jpeg', 265.00, 'Tropical blend of mango and dragonfruit flavors, perfect for a fruity refreshment.')">View</button>
+                </div>
+            </div>
+
+            <div class="product-box">
+                <div class="img"><img src="images/product14.jpg" alt="HIBISCUS TEA WITH POMEGRANATE"></div>
+                <div class="title">HIBISCUS TEA WITH POMEGRANATE</div>
+                <div class="box">
+                    <div class="price">₱220.00</div>
+                    <button class="btnView" onclick="displayProduct('HIBISCUS TEA WITH POMEGRANATE', 'images/product14.jpg', 220.00, 'Tart and refreshing hibiscus tea with sweet and juicy pomegranate pearls.')">View</button>
+                </div>
+            </div>
+
+            <div class="product-box">
+                <div class="img"><img src="images/product15.jpeg" alt="PINK DRINK WITH STRAWBERRY AÇAÍ"></div>
+                <div class="title">PINK DRINK WITH STRAWBERRY AÇAÍ</div>
+                <div class="box">
+                    <div class="price">₱240.00</div>
+                    <button class="btnView" onclick="displayProduct('PINK DRINK WITH STRAWBERRY AÇAÍ', 'images/product15.jpeg', 240.00, 'Sweet and vibrant blend of strawberry acai and coconut milk, topped with a light strawberry.')">View</button>
+                </div>
+            </div>
+
+            <div class="product-box">
+                <div class="img"><img src="images/product16.jpeg" alt="STRAWBERRY AÇAÍ WITH LEMONADE"></div>
+                <div class="title">STRAWBERRY AÇAÍ WITH LEMONADE</div>
+                <div class="box">
+                    <div class="price">₱210.00</div>
+                    <button class="btnView" onclick="displayProduct('STRAWBERRY AÇAÍ WITH LEMONADE', 'images/product16.jpeg', 210.00, 'Refreshing combination of strawberry acai and lemonade, perfect for a tangy and fruity drink.')">View</button>
+                </div>
+            </div>
+
+            <div class="product-box">
+                <div class="img"><img src="images/product17.jpg" alt="CHOCOLATE CHIP COOKIE"></div>
+                <div class="title">CHOCOLATE CHIP COOKIE</div>
+                <div class="box">
+                    <div class="price">₱55.00</div>
+                    <button class="btnView" onclick="displayProduct('CHOCOLATE CHIP COOKIE', 'images/product17.jpg', 55.00, 'Classic chewy cookie studded with delicious chocolate chips.')">View</button>
+                </div>
+            </div>
+
+            <div class="product-box">
+                <div class="img"><img src="images/product18.jpg" alt="VANILLA BEAN CUSTARD"></div>
+                <div class="title">VANILLA BEAN CUSTARD</div>
+                <div class="box">
+                    <div class="price">₱50.00</div>
+                    <button class="btnView" onclick="displayProduct('VANILLA BEAN CUSTARD', 'images/product18.jpg', 50.00, 'Flaky pastry filled with creamy vanilla bean custard.')">View</button>
+                </div>
+            </div>
+
+            <div class="product-box">
+                <div class="img"><img src="images/product19.png" alt="GLAZED DOUGHNUT"></div>
+                <div class="title">GLAZED DOUGHNUT</div>
+                <div class="box">
+                    <div class="price">₱45.00</div>
+                    <button class="btnView" onclick="displayProduct('GLAZED DOUGHNUT', 'images/product19.png', 45.00, 'Light and fluffy donut coated in a sweet and shiny glaze.')">View</button>
+                </div>
+            </div>
+
+            <div class="product-box">
+                <div class="img"><img src="images/product20.jpeg" alt="HAM AND SWISS CROISSANT"></div>
+                <div class="title">HAM AND SWISS CROISSANT</div>
+                <div class="box">
+                    <div class="price">₱55.00</div>
+                    <button class="btnView" onclick="displayProduct('HAM AND SWISS CROISSANT', 'images/product20.jpeg', 55.00, 'Buttery croissant filled with savory ham and swiss cheese.')">View</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+        <div class="previewMenu" id="previewMenu">
+            <div class="productContent">
+                <div class="img_holder">
+                    <img class="add_to_cart_img" id="product_img" src="" alt="Product Image">
+                </div>
+                <div class="text_content">
+                    <div class="btn-close" onclick="toggle_remove()">&times;</div>
+                    <h1 id="product_name"></h1>
+                    <p id="product_price"></p>
+                    <p id="desc_product">DESCRIPTION:</p>
+                    <p id="product_desc"></p>
+                    <div class="contItemsCount">
+                        <p>Quantity:</p>
+                        <button id="btnMinusITEM" onclick="decreaseQuant()">-</button>
+                        <div class="input_box">
+                            <input type="text" id="itemQuant" name="itemQuant" value="1" required>
+                        </div>
+                        <button id="btnAddItem" onclick="increaseQuant()">+</button>
+                    </div>
+                    <button id="addCart" onclick="addToCart()">Add to Cart</button>
+                    <div class="overlay">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <div class="overlay"></div>
+    
+    <section class="shopping_cart" id="shopping_cart">
+        <div class="order_container">
+            <a href="#" onclick="remove_cart()"><span class='bx bx-x-circle close-icon'></span></a>
+            <h1 id="shop_title">Your Shopping Cart</h1>
+            <hr>
+            <h2>Cart items:</h2>
+            <table border="0" id="item_list"></table>
+            <p class="total_price">Total: <span id="total_price"> </span></p>
+            <button id="check_out" onclick="checkout()">Check Out</button>
+        </div>
+    </section>
+    
+
+    <!-- Place Order Section -->
+    <section class="place_order" id="place_order">
+        <div class="deliver_info">
+            <a href="#" onclick="back_to_cart(); return false;">
+                <span class='bx bx-arrow-back'></span>
+            </a>
+            <div class="sub_title">
+                <h1>Delivery Information</h1>
+            </div>
+
+            <form>
+                <table border="0">
+                    <tr>
+                        <td>Full Name:</td>
+                        <td class="input_center">
+                            <input type="text" id="full_name" name="full_name" value="" placeholder="Name" required/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Mobile Number:</td>
+                        <td class="input_center">
+                            <input type="number" id="mobile_num" name="mobile_num" value="" placeholder="(+63) 987 654 3210" required/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Address:</td>
+                        <td class="input_center">
+                            <textarea id="address" placeholder="Your full address" required></textarea>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <span class='bx bx-wallet'></span>
+                            Payment Option:
+                        </td>
+                        <td class="input_center">
+                            <select name="pay_method" id="pay_method" onchange="toggle_cardfields()">
+                                <option value="Cash_on_Delivery">Cash on Delivery</option>
+                                <option value="Card">Credit/Debit Card</option>
+                            </select><br>
+                        </td>
+                    </tr>
+
+                    <tr id="name_on_card_row" style="display: none;">
+                        <td style="border: none;"></td>
+                        <td class="input_center" style="border: none;">
+                            <input type="text" id="name_on_card" name="name_on_card" value="" placeholder="Name on Card" required/>
+                        </td>
+                    </tr>
+
+                    <tr id="card_num_row" style="display: none;">
+                        <td></td>
+                        <td class="input_center">
+                            <input type="number" id="card_num" name="card_num" value="" placeholder="Card Number" required/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2" class="input_center">
+                            <textarea placeholder="Other instructions..."></textarea>
+                        </td>
+                    </tr>
+                </table>
+
+                <button type="reset" id="place_order_btn" onclick="display_success()">Place Order</button>
+            </form>
+        </div>
+    </section>
+    <!-- End of Place Order Section -->
+
+    <div class="placeOrderOverlay"></div>
+
+    <!-- Display Successfully Ordered -->
+    <section class="display_success" id="display_success">
+        <div class="message">
+            <span class="bx bxs-check-circle"></span>
+            <h1 id="shop_title">Thank you!!</h1>
+            <h2>Your order has been successfully placed.</h2>
+            <button id="okay" onclick="successfully_ordered()">Okay</button>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="contact-container">
+            <h2>Contact Us</h2>
+            <div class="contact-wrapper">
+                <div class="contact-form">
+                    <h3>Send us message</h3>
+                    <form>
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="email" placeholder="Your Email">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="message" placeholder="Your Message">
+                        </div>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p><i class='bx bx-phone'></i>+6398 765 4321</p>
+                    <p><i class='bx bx-envelope'></i>coffeeshop@gmail.com</p>
+                    <p><i class='bx bx-pin'></i>Alcalde Jose St., Kapasigan, Pasig City</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section class="footer container">
+        <div class="footer-box">
+            <a href="#" class="logo">Coffee.</a>
+            <div class="social">
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+                <a href="#"><i class='bx bx-envelope'></i></a>
+            </div>
+        </div>
+        <div class="footer-box">
+            <h3>About</h3>
+            <a href="#">Our Story</a>
+            <a href="#">FAQ</a>
+            <a href="#">Careers</a>
+        </div>
+        <div class="footer-box">
+            <h3>Customer's Resources</h3>
+            <a href="#">Menu</a>
+            <a href="#">Location</a>
+            <a href="#">Support</a>
+        </div>
+        <div class="footer-box">
+            <h3>Services</h3>
+            <a href="#">Payment Options</a>
+            <a href="#">Refunds & Exchanges</a>
+            <a href="#">Limitation Of Liability</a>
+        </div>
+    </section>
+    <p class="copyright">&#169; Laiza Platon.</p>
+    <script src="main.js"></script>
+</body>
+</html>
